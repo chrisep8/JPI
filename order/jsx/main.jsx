@@ -1,5 +1,5 @@
 var json = [{
-    section:"Produk Makanan",
+    section:"Barang",
     design:[{
         image: "img/packaging/askul_garbage_bag.jpg",
         details:{
@@ -23,11 +23,11 @@ var json = [{
         }
     }]
 },{
-    section:"Bukan Makanan",
+    section:"Makanan",
     design:[{
         image: "img/packaging/doritos_toasted_corn.jpg",
         details:{
-            name: "Doritos ToastedCorn",
+            name: "Doritos Toasted Corn",
             date: "2015-03-11",
             price: "250"
         }
@@ -51,9 +51,9 @@ var json = [{
 var Details = React.createClass({
    render:function(){
        return(
-           <div>
-               {this.props.details.name}
-               {this.props.details.date}
+           <div className="details">
+               <span className="name">{this.props.details.name}</span><br/>
+               <span className="date">{this.props.details.date}</span>
            </div>
        )
    }
@@ -62,7 +62,7 @@ var Details = React.createClass({
 var Design = React.createClass({
     render: function(){
         return(
-            <div>
+            <div className="design">
                 <img className="thumbnail" src={this.props.design.image}/>
                 <Details details={this.props.design.details}/>
             </div>
@@ -73,12 +73,14 @@ var Design = React.createClass({
 var Section = React.createClass({
    render: function(){
        var designs = this.props.section.design.map(function(design){
-          return(
-              <Design design={design}/>
-          )
+          return(<Design design={design}/>)
        });
+
        return(
-           <div>
+           <div className="section">
+               <div className="id">
+                   {this.props.section.section}
+               </div>
                {designs}
            </div>
        )
@@ -88,12 +90,8 @@ var Section = React.createClass({
 var Main = React.createClass({
     render: function () {
        return (
-          <div className="designs">
-              {
-                  this.props.data.map(function (section) {
-                  return <Section section={section}/>
-                  })
-              }
+          <div>
+              {this.props.data.map(function (section) {return <Section section={section}/>                })}
           </div>
        );
    }

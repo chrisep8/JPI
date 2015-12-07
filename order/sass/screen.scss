@@ -1,16 +1,17 @@
+/* LAYOUT || Structure and layout styles (Macro styles).
+========================================================================== */
+@import "compass/reset";
+@import "layout/_grids";
+@import "layout/order";
+
+
 /* BASE || Global variables and styles
 ========================================================================== */
 @import "base/global";
 @import "base/variable";
 
 
-/* LAYOUT || Structure and layout styles (Macro styles).
-========================================================================== */
-@import "compass/reset";
-@import "layout/_grids";
-
-
 /* COMPONENT || Styles for Re-use able elements of site (Micro styles).
 ========================================================================== */
 @import "component/navBar";
-@import "component/designs";
+@import "component/design";
