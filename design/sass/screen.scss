@@ -1,0 +1,23 @@
+/* FRAMEWORKS || Frameworks imports
+========================================================================== */
+@import "compass/reset";
+@import "framework/_grids";
+
+
+/* BASE || Global variables and styles
+========================================================================== */
+@import "base/global";
+@import "base/variable";
+
+
+/* LAYOUT || Structure and layout styles (Macro styles).
+========================================================================== */
+
+
+
+/* COMPONENT || Re-use able component styles (Micro styles).
+========================================================================== */
+@import "component/navBar";
+
+
+
