@@ -43,13 +43,17 @@
 //});
 import {connect} from 'react-redux';
 import {chooseMenu} from '../../redux/actions.jsx';
+const React = require('react');
 
 const OptionItem = (props) => {
     return(
         <div style = {props.style}
              className={"option "}
              onClick={ props.id === props.selectedMenu ? props.turnOff : props.turnOn}>
+            <div>
             {props.children}
+            </div>
+            <paper-ripple recenters></paper-ripple>
         </div>
     )
 };
@@ -57,8 +61,8 @@ const OptionItem = (props) => {
 const mapStateToProps = (state, ownProps) =>{
     return{
         style:{
-            opacity: ownProps.id == state.selectedMenu ? 1 : 0.5
-        },selectedMenu: state.selectedMenu
+            opacity: ownProps.id == state.uiReducer.selectedMenu ? 1 : 0.5
+        },selectedMenu: state.uiReducer.selectedMenu
     }
 };
 
@@ -79,6 +83,5 @@ export const Bar = () =>(
         <Option id={1}>Asset</Option>
         <Option id={2}>Properties</Option>
         <Option id={3}>Details</Option>
-        <Option id={4}>Preview</Option>
     </div>
 );

@@ -3,8 +3,9 @@
   color: white;
   font-size: 0.85em;
   opacity: 0.8;
-  max-height: 149px;
+  max-height: 200px;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-left: 57px;
   .asset{
 
@@ -12,23 +13,46 @@
       @include span(1 of 5);
       @extend .user-select;
       background-color: $secondaryDarkBlue;
-      border-radius: 10px;
+      border-radius: 5px;
       text-align: center;
       padding: 1.5em;
       margin: 1em;
       cursor: pointer;
+      position: relative;
     }
   }
 
   .properties{
-    padding: 2em;
+    .panel_one{
+      @include span(100%/4);
+      padding:1em;
+      margin:0;
+      color: white;
+    }
+    .panel{
+      @include span(100%/2);
+      padding:1em;
+      margin:0;
+      color: white;
+    }
   }
 
   .details{
-    padding: 2em;
-  }
+    .preview{
+      @include span(1 of 3);
+      height:105px;
+      background-color: $secondaryDarkBlue;
+      border-radius: 5px;
+      text-align: center;
+      padding: 1.5em;
+      margin: 1em;
+      cursor: pointer;
+      position: relative;
+    }
 
-  .preview{
-    padding: 2em;
+    .info{
+      @include span(2 of 3);
+      margin: 1em;
+    }
   }
 }

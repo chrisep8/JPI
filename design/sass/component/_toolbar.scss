@@ -5,11 +5,11 @@
   background-color: $secondaryBlue;
 
   .menu{
-    @include container(1200px);
+    @include container(1000px);
     background-color: $secondaryDarkBlue;
 
     .option{
-      @include span(25%);
+      @include span(100%/3);
       @extend .user-select;
       height: 50px;
       margin:0;
@@ -23,6 +23,7 @@
       font-size: 1em;
       transition: opacity 0.2s;
       cursor: pointer;
+      position: relative;
     }
   }
 
@@ -44,6 +45,7 @@
       font-size: 0.9em;
       transition: opacity 0.1s;
       cursor: pointer;
+      position: relative;
     }
   }
   .tools{

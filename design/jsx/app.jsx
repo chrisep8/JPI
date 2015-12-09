@@ -2,7 +2,10 @@ import { createStore } from 'redux';
 import {Provider, connect} from 'react-redux';
 import {Bar} from './component/toolbar/bar.jsx';
 import {Tool} from './component/toolbar/tool.jsx';
-import {uiReducer} from './redux/reducer.jsx';
+import reducer from './redux/reducer.jsx';
+
+const React = require('react');
+const ReactDOM = require('react-dom');
 let injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -115,6 +118,6 @@ const App = () => (
 );
 
 ReactDOM.render(
-    <Provider store={createStore(uiReducer)}>
+    <Provider store={createStore(reducer)}>
         <App/>
     </Provider>, document.getElementById('app'));

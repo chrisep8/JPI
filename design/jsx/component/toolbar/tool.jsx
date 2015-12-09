@@ -1,11 +1,16 @@
 import {connect} from 'react-redux';
 import {chooseView} from '../../redux/actions.jsx';
 import {Asset} from './expanded/assets.jsx';
+const TextField = require('material-ui/lib/text-field');
+const RadioButton = require('material-ui/lib/radio-button');
+const RadioButtonGroup = require('material-ui/lib/radio-button-group');
+const React = require('react');
 
 const pOptionItem = (props) => {
     return(
         <div style = {props.style} className={"option "} onClick={props.handleClick}>
             {props.children}
+            <paper-ripple recenters></paper-ripple>
         </div>
     )
 };
@@ -13,7 +18,7 @@ const pOptionItem = (props) => {
 const mapStateToProps = (state, ownProps) =>{
     return{
         style:{
-            opacity: ownProps.id == state.selectedView ? 1 : 0.5
+            opacity: ownProps.id == state.uiReducer.selectedView ? 1 : 0.5
         }
     }
 };
@@ -56,8 +61,6 @@ const pExpandedTool = (props) => {
                 return <Properties/>;
             case 3:
                 return <Details/>;
-            case 4:
-                return <Preview/>;
         }
     };
     return(
@@ -69,7 +72,7 @@ const pExpandedTool = (props) => {
 
 const mapStateToToolProps = (state, ownProps) =>{
     return{
-        selectedMenu:state.selectedMenu
+        selectedMenu:state.uiReducer.selectedMenu
     }
 };
 
@@ -93,18 +96,19 @@ export const Tool = () =>(
 );
 
 
-const Preview = () =>{
-    return(
-        <div className="preview">
-            Preview
-        </div>
-    )
-};
 
 const Details = () =>{
     return(
         <div className="details">
-            Details
+            <div className="preview">Preview</div>
+            <div className="info">
+                <TextField
+                    underlineStyle={{opacity:0}}
+                    inputStyle={{color: 'white'}}
+                    floatingLabelStyle={{color: 'white'}}
+                    floatingLabelText="Nama Project" />
+                <div className="date">Update terakhir</div>
+            </div>
         </div>
     )
 };
@@ -112,11 +116,47 @@ const Details = () =>{
 const Properties = () =>{
     return(
         <div className="properties">
-            Properties
+            <div className="panel_one">
+                Background
+                <RadioButtonGroup name="Background" defaultSelected="Putih"  style={{'paddingTop':'1em'}}>
+                    <RadioButton
+                        value="Putih"
+                        label="Putih"
+                        labelStyle={{color:'white','font-size':'0.9em'}} />
+                    <RadioButton
+                        value="Hitam"
+                        label="Hitam"
+                        labelStyle={{color:'white','font-size':'0.9em'}}/>
+                    <RadioButton
+                        value="Biru"
+                        label="Biru"
+                        labelStyle={{color:'white','font-size':'0.9em'}}/>
+                </RadioButtonGroup>
+            </div>
+            <div className="panel_one">
+                Bahan
+                <RadioButtonGroup name="Bahan" defaultSelected="Karton" style={{'paddingTop':'1em'}}>
+                    <RadioButton
+                        value="Karton"
+                        label="Karton"
+                        labelStyle={{color:'white','font-size':'0.9em'}} />
+                    <RadioButton
+                        value="Kardus"
+                        label="Kardus"
+                        labelStyle={{color:'white','font-size':'0.9em'}}/>
+                    <RadioButton
+                        value="Plastik"
+                        label="Plastik"
+                        labelStyle={{color:'white','font-size':'0.9em'}}/>
+                </RadioButtonGroup>
+            </div>
+            <div className="panel">
+                Ukuran
+                Bentuk
+            </div>
         </div>
     )
 };
-
 
 
 

@@ -5,9 +5,39 @@
     <title>Just Pack It - Order</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/screen.css"/>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="import" href="webComponent/paper-ripple/paper-ripple.html">
+    <style is="custom-style">
+        paper-input-container{
+            --paper-input-container-color: {color:white;opacity:0.5;};
+            --paper-input-container-focus-color: white;
+            --paper-input-container-invalid-color: white;
+            --paper-input-container-input-color: white;
+        }
+        paper-tab{
+            --paper-tab:{color: black;};
+            --paper-tab-ink: #00b0ff;
+            --paper-tab-content-unselected : {color: black};
+            --paper-tab-content: {color: #00b0ff};
+        }
+        paper-tabs{
+            --paper-tabs-selection-bar-color: #00b0ff;
+        }
+        paper-dropdown-menu{
+            --paper-dropdown-menu:{
+                --paper-input-container-color: {color:white;opacity:0.5;};
+                --paper-input-container-invalid-color: white;
+                --paper-input-container-input-color: white;
+                --paper-input-container-underline: {opacity:0};
+                --paper-input-container-label:{color:white;opacity:0.5};
+                --paper-input-container-focus-color: white;
+                --paper-input-container-underline-focus:{opacity: 0};
+            };
+            --paper-dropdown-menu-input:{
+                opacity: 1;
+            };
+        }
+    </style>
 </head>
 <body>
 <div class="navBar">
