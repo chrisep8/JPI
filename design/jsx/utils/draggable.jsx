@@ -1,21 +1,4 @@
-var App = React.createClass({
-    render:function(){
-        var style = {
-            height: '200px',
-            width: '200px',
-            background:'#2e2e2e',
-            color: 'white'
-        };
-        var pos = {x: 100, y: 100};
-        return(
-            <Draggable  initialPos={pos}>
-                <div style={style}>asdasdasdasdasdasd</div>
-            </Draggable>
-        )
-    }
-});
-
-var Draggable = React.createClass({
+export var Draggable = React.createClass({
     getDefaultProps: function(){
         return {
             initialPos: {x: 0, y:0}
@@ -43,8 +26,8 @@ var Draggable = React.createClass({
         this.setState({
             dragging:true,
             rel:{
-                y: e.pageX - pos.left,
-                x: e.pageY - pos.top
+                y: e.pageY - pos.top,
+                x: e.pageX - pos.left
             }
         });
         e.stopPropagation();
@@ -79,5 +62,3 @@ var Draggable = React.createClass({
         )
     }
 });
-
-ReactDOM.render(<App/>, document.getElementById('app'));

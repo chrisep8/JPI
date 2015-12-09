@@ -1,18 +1,19 @@
 /* PRIMARY COLOR
 ========================================================================== */
-$lightBlue:#00b0ff;
-$darkBlue:#0090E9;
+$primaryBlue:#00b0ff;
+$primaryDarkBlue:#0090E9;
 
 
 /* SECONDARY COLOR
 ========================================================================== */
-$veryDarkBlue:#2E4557;
-
+$secondaryBlue:#2E4557;
+$secondaryDarkBlue:#283c4c;
+$secondaryLightBlue:#354f64;
 /* SIZES
 ========================================================================== */
 
 
-/* EXTENDS
+/* COMMON UTIL
 ========================================================================== */
 .depth_one{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -32,4 +33,18 @@ $veryDarkBlue:#2E4557;
 
 .depth_five{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.dividerBottom{
+  @include container(1200px);
+  height: 1px;
+  background-color: $secondaryDarkBlue;
+  opacity: 0.6;
+}
+
+.user-select{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
 }

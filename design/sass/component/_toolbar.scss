@@ -1,0 +1,52 @@
+.toolbar{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  background-color: $secondaryBlue;
+
+  .menu{
+    @include container(1200px);
+    background-color: $secondaryDarkBlue;
+
+    .option{
+      @include span(25%);
+      @extend .user-select;
+      height: 50px;
+      margin:0;
+      padding-top: 1.1em;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      opacity: 0.5;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 1em;
+      transition: opacity 0.2s;
+      cursor: pointer;
+    }
+  }
+
+  .views{
+    @include container(1200px);
+
+    .option{
+      @include span(100%/6);
+      @extend .user-select;
+      height: 30px;
+      margin:0;
+      padding-top: 8px;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      opacity: 0.5;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 0.9em;
+      transition: opacity 0.1s;
+      cursor: pointer;
+    }
+  }
+  .tools{
+    background-color: $secondaryLightBlue;
+  }
+}
