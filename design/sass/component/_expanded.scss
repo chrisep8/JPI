@@ -6,7 +6,7 @@
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-left: 57px;
+  padding-left: 2%;
   .asset{
 
     .addAsset{
@@ -24,7 +24,7 @@
   }
 
   .properties{
-    margin-left: 150px;
+    margin-left: 15%;
     .panel_one{
       @include span(100%/6);
       padding:1em;
@@ -41,7 +41,7 @@
   }
 
   .details{
-    margin-left: 150px;
+    margin-left: 15%;
     .preview{
       @include span(1 of 3);
       height:150px;

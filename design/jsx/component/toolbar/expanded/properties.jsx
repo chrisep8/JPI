@@ -85,7 +85,7 @@ class Properties extends React.Component{
                     <div className="ukuran">
                         <span style={{margin:'1em'}}>Ukuran</span>
                         <TextField
-                            style={{width:'8em',paddingLeft:'24px'}}
+                            style={{width:'4em',marginLeft:'24px'}}
                             underlineStyle={{opacity:0}}
                             inputStyle={{color: 'white'}}
                             floatingLabelStyle={{color: 'white'}}
@@ -93,7 +93,7 @@ class Properties extends React.Component{
                             defaultValue={this.props.tinggi}
                             onChange={this.onChangeTinggi.bind(this)}/>
                         <TextField
-                            style={{width:'8em'}}
+                            style={{width:'4em'}}
                             underlineStyle={{opacity:0}}
                             inputStyle={{color: 'white'}}
                             floatingLabelStyle={{color: 'white'}}
@@ -101,7 +101,7 @@ class Properties extends React.Component{
                             defaultValue={this.props.panjang}
                             onChange={this.onChangePanjang.bind(this)}/>
                         <TextField
-                            style={{width:'8em'}}
+                            style={{width:'4em'}}
                             underlineStyle={{opacity:0}}
                             inputStyle={{color: 'white'}}
                             floatingLabelStyle={{color: 'white'}}
