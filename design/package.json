@@ -1,0 +1,29 @@
+{
+  "name": "design",
+  "version": "1.0.0",
+  "description": "The creator",
+  "main": "index.html",
+  "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "material-ui": "^0.13.4",
+    "babel-preset-es2015": "^6.3.13",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.0",
+    "react-tap-event-plugin": "^0.2.1",
+    "react": "^0.14.3",
+    "react-draggable": "^1.1.3",
+    "redux": "^3.0.4",
+    "redux-devtools": "^2.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "command:"
+  ],
+  "author": "team jpi",
+  "license": "ISC"
+}
