@@ -55,14 +55,14 @@ function dataReducer(state = [
 }
 
 function detailReducer(state =  {
-    project_name:'',
-    tanggal:'',
-    harga:''
+    project_name:'Figuran Hans Solo',
+    tanggal:'2015-04-04',
+    harga:'Rp. 11.000,00'
 }, action){
     switch(action.type){
         case 'UPDATE_NAME':
             return {
-                project_name:action.project_name,
+                project_name:action.name,
                 tanggal:state.tanggal,
                 harga:state.harga
             };
@@ -87,7 +87,9 @@ function propertiesReducer(state = {
     background:'Putih',
     bahan:'Karton',
     bentuk:'Kubus',
-    ukuran:{tinggi:20,panjang:20,lebar:20}
+    tinggi:'20',
+    panjang:'20',
+    lebar:'20'
 }, action){
     switch(action.type){
         case 'UPDATE_BACKGROUND':
@@ -95,29 +97,59 @@ function propertiesReducer(state = {
                 background:action.background,
                 bahan:state.bahan,
                 bentuk:state.bentuk,
-                ukuran:state.ukuran
+                tinggi:state.tinggi,
+                panjang:state.panjang,
+                lebar:state.lebar
             };
         case 'UPDATE_BAHAN':
             return {
                 background:state.background,
                 bahan:action.bahan,
                 bentuk:state.bentuk,
-                ukuran:state.ukuran
+                tinggi:state.tinggi,
+                panjang:state.panjang,
+                lebar:state.lebar
             };
         case 'UPDATE_BENTUK':
             return {
                 background:state.background,
                 bahan:state.bahan,
                 bentuk:action.bentuk,
-                ukuran:state.ukuran
+                tinggi:state.tinggi,
+                panjang:state.panjang,
+                lebar:state.lebar
             };
-        case 'UPDATE_UKURAN':
+        case 'UPDATE_UKURAN_PANJANG':
             return {
                 background:state.background,
                 bahan:state.bahan,
                 bentuk:state.bentuk,
-                ukuran:action.ukuran
+                tinggi:state.tinggi,
+                panjang:action.panjang,
+                lebar:state.lebar
+
             };
+        case 'UPDATE_UKURAN_TINGGI':
+            return {
+                background:state.background,
+                bahan:state.bahan,
+                bentuk:state.bentuk,
+                tinggi:action.tinggi,
+                panjang:state.panjang,
+                lebar:state.lebar
+
+            };
+        case 'UPDATE_UKURAN_LEBAR':
+            return {
+                background:state.background,
+                bahan:state.bahan,
+                bentuk:state.bentuk,
+                tinggi:state.tinggi,
+                panjang:state.panjang,
+                lebar:action.lebar
+
+            };
+
         default :
             return state;
     }

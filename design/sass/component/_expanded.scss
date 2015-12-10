@@ -19,28 +19,32 @@
       margin: 1em;
       cursor: pointer;
       position: relative;
+      min-width: 100px;
     }
   }
 
   .properties{
+    margin-left: 150px;
     .panel_one{
-      @include span(100%/4);
+      @include span(100%/6);
       padding:1em;
       margin:0;
       color: white;
     }
     .panel{
-      @include span(100%/2);
+      @include span(100%/1.5);
       padding:1em;
       margin:0;
       color: white;
+      overflow: hidden;
     }
   }
 
   .details{
+    margin-left: 150px;
     .preview{
       @include span(1 of 3);
-      height:105px;
+      height:150px;
       background-color: $secondaryDarkBlue;
       border-radius: 5px;
       text-align: center;
