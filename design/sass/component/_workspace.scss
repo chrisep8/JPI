@@ -1,0 +1,11 @@
+.workspace{
+  align-content: center;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  overflow: auto;
+  justify-content: center;
+  display: flex;
+  .canvas{
+    margin:auto;
+  }
+}

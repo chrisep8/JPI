@@ -1,3 +1,6 @@
+const React = require('react');
+const ReactDOM = require('react-dom');
+
 export var Draggable = React.createClass({
     getDefaultProps: function(){
         return {

@@ -84,7 +84,7 @@ function detailReducer(state =  {
 }
 
 function propertiesReducer(state = {
-    background:'Putih',
+    background:'white',
     bahan:'Karton',
     bentuk:'Kubus',
     tinggi:'20',

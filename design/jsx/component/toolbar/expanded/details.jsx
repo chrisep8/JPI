@@ -1,4 +1,5 @@
 import {updateName, updateTanggal, updateHarga} from '../../../redux/actions.jsx'
+const RaisedButton = require('material-ui/lib/raised-button');
 import {connect} from 'react-redux';
 
 const TextField = require('material-ui/lib/text-field');
@@ -18,12 +19,13 @@ class Details extends React.Component{
                         floatingLabelText="Nama Project"
                         defaultValue={this.props.projectName}
                         onChange={this.props.updateName}/>
-                    <div className="date">Update terakhir: {this.props.tanggal} Rp. {this.props.harga}</div>
+                    <div className="date">Update terakhir: {this.props.tanggal}<br/>
+                        <RaisedButton label="Default" /></div>
                 </div>
             </div>
         )
     }
-};
+}
 
 const mapStateToProps = (state) =>{
     return{

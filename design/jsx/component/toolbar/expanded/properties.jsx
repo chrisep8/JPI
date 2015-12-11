@@ -43,15 +43,15 @@ class Properties extends React.Component{
                         style={{'paddingTop':'1em'}}
                         onChange={this.props.updateBackground}>
                         <RadioButton
-                            value="Putih"
+                            value="white"
                             label="Putih"
                             labelStyle={{color:'white','fontSize':'0.9em'}} />
                         <RadioButton
-                            value="Hitam"
-                            label="Hitam"
+                            value="#795548"
+                            label="Coklat"
                             labelStyle={{color:'white','fontSize':'0.9em'}}/>
                         <RadioButton
-                            value="Biru"
+                            value="#00b0ff"
                             label="Biru"
                             labelStyle={{color:'white','fontSize':'0.9em'}}/>
                     </RadioButtonGroup>

@@ -2,6 +2,7 @@ import { createStore } from 'redux';
 import {Provider, connect} from 'react-redux';
 import {Bar} from './component/toolbar/bar.jsx';
 import {Tool} from './component/toolbar/tool.jsx';
+import Workspace from './component/workspace.jsx';
 import reducer from './redux/reducer.jsx';
 
 const React = require('react');
@@ -103,18 +104,18 @@ injectTapEventPlugin();
 //ReactDOM.render(<App/>, document.getElementById('app'));
 
 
-
-
+const App = () => (
+    <div>
+        <Workspace/>
+        <Toolbar/>
+    </div>
+);
 
 const Toolbar = () =>(
     <div className="toolbar">
         <Tool/>
         <Bar/>
     </div>
-);
-
-const App = () => (
-    <Toolbar/>
 );
 
 ReactDOM.render(
