@@ -1,6 +1,7 @@
 .navBar {
   width: 100%;
   position: fixed;
+  z-index: 200;
   .top {
     height: 50px;
     background: _linear_gradient(90deg, $primaryBlue, $primaryDarkBlue);

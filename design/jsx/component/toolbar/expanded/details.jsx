@@ -6,7 +6,11 @@ const TextField = require('material-ui/lib/text-field');
 const React = require('react');
 
 class Details extends React.Component{
+
     render(){
+        var buttonStyle={
+            marginTop:'1em'
+        };
         return(
             <div className="details">
                 <div className="preview">Preview</div>
@@ -20,7 +24,7 @@ class Details extends React.Component{
                         defaultValue={this.props.projectName}
                         onChange={this.props.updateName}/>
                     <div className="date">Update terakhir: {this.props.tanggal}<br/>
-                        <RaisedButton label="Default" /></div>
+                        <RaisedButton label="Pesan Sekarang" backgroundColor='#00b0ff' style={buttonStyle} labelStyle={{color:'white'}}/></div>
                 </div>
             </div>
         )

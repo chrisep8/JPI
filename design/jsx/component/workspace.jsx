@@ -53,7 +53,6 @@ class Workspace extends React.Component{
                 <Paper zDepth={2} style={style}>
                     <div className="canvas">
                         <Draggable
-                            zIndex={-1}
                             start={{x: 162, y: 323.5}}>
                             <div style={{background:'url(img/logo_full.png)',width:'500px',height:'108px'}}></div>
                         </Draggable>
