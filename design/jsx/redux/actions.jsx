@@ -72,3 +72,17 @@ export function updateHarga(data){
         harga:data
     }
 }
+
+export function updatePesanDialog(data){
+    return {
+        type:'SHOW_PESAN_DIALOG',
+        pesanDialog:data
+    }
+}
+
+export function updateAssetDialog(data){
+    return {
+        type:'SHOW_ADDASSET_DIALOG',
+        addAssetDialog:data
+    }
+}

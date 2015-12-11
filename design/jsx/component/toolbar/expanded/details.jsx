@@ -1,15 +1,19 @@
-import {updateName, updateTanggal, updateHarga} from '../../../redux/actions.jsx'
+import {updateName, updateTanggal, updateHarga, updatePesanDialog} from '../../../redux/actions.jsx'
 const RaisedButton = require('material-ui/lib/raised-button');
 import {connect} from 'react-redux';
+
 
 const TextField = require('material-ui/lib/text-field');
 const React = require('react');
 
 class Details extends React.Component{
-
     render(){
         var buttonStyle={
             marginTop:'1em'
+        };
+        var buttonStyle2={
+            marginTop:'1em',
+            marginLeft:'1em'
         };
         return(
             <div className="details">
@@ -23,8 +27,19 @@ class Details extends React.Component{
                         floatingLabelText="Nama Project"
                         defaultValue={this.props.projectName}
                         onChange={this.props.updateName}/>
-                    <div className="date">Update terakhir: {this.props.tanggal}<br/>
-                        <RaisedButton label="Pesan Sekarang" backgroundColor='#00b0ff' style={buttonStyle} labelStyle={{color:'white'}}/></div>
+                    <div className="date">
+                        Update terakhir: {this.props.tanggal}<br/>
+                        <RaisedButton
+                            label={"Pesan (" + this.props.harga + " /print)"}
+                            backgroundColor='#00b0ff'
+                            style={buttonStyle}
+                            labelStyle={{color:'white'}} onClick={this.props.showPesanDialog}/>
+                        <RaisedButton
+                            label='Save'
+                            backgroundColor='#EF5350'
+                            style={buttonStyle2}
+                            labelStyle={{color:'white'}}/>
+                    </div>
                 </div>
             </div>
         )
@@ -41,7 +56,8 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        updateName: (event) => dispatch(updateName(event.target.value))
+        updateName: (event) => dispatch(updateName(event.target.value)),
+        showPesanDialog: () => dispatch(updatePesanDialog(true))
     }
 };
 

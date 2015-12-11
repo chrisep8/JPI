@@ -4,6 +4,8 @@ import {Bar} from './component/toolbar/bar.jsx';
 import {Tool} from './component/toolbar/tool.jsx';
 import Workspace from './component/workspace.jsx';
 import reducer from './redux/reducer.jsx';
+const Dialog = require('material-ui/lib/dialog');
+import {updatePesanDialog, updateAssetDialog} from './redux/actions.jsx'
 
 const React = require('react');
 const ReactDOM = require('react-dom');
@@ -104,12 +106,32 @@ injectTapEventPlugin();
 //ReactDOM.render(<App/>, document.getElementById('app'));
 
 
-const App = () => (
-    <div>
-        <Workspace/>
-        <Toolbar/>
-    </div>
-);
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <Dialog
+                    title="Detail Pemesanan"
+                    actions={[{ text: 'Cancel' },{ text: 'Submit',  ref: 'submit' }]}
+                    actionFocus="Pesan"
+                    open={this.props.pesanDialog}
+                    onRequestClose={this.props.hidePesanDialog}>
+                    The actions in this window are created from the json that's passed in.
+                </Dialog>
+                <Dialog
+                    title="Tambah Asset"
+                    actions={[{ text: 'Cancel' },{ text: 'Submit',  ref: 'submit' }]}
+                    actionFocus="submit"
+                    open={this.props.addAssetDialog}
+                    onRequestClose={this.props.hideAddAssetDialog}>
+                    The actions in this window are created from the json that's passed in.
+                </Dialog>
+                <Workspace/>
+                <Toolbar/>
+            </div>
+        )
+    }
+}
 
 const Toolbar = () =>(
     <div className="toolbar">
@@ -118,7 +140,26 @@ const Toolbar = () =>(
     </div>
 );
 
+const mapStateToProps = (state) => {
+    return{
+        addAssetDialog:state.uiReducer.addAssetDialog,
+        pesanDialog:state.uiReducer.pesanDialog
+    }
+};
+
+const mapDispatchToProps = (dispatch) =>{
+   return{
+       hideAddAssetDialog: () => dispatch(updateAssetDialog(false)),
+       hidePesanDialog: () => dispatch(updatePesanDialog(false))
+   }
+};
+
+const Creator = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);
+
 ReactDOM.render(
     <Provider store={createStore(reducer)}>
-        <App/>
+        <Creator/>
     </Provider>, document.getElementById('app'));

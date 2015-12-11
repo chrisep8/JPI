@@ -1,16 +1,40 @@
 import { combineReducers } from 'redux'
 
-function uiReducer(state = {selectedMenu:0, selectedView:0}, action){
+function uiReducer(state = {
+    selectedMenu:0,
+    selectedView:0,
+    addAssetDialog:false,
+    pesanDialog:false
+}, action){
     switch(action.type){
         case 'CHOOSE_MENU':
             return {
                 selectedMenu:action.selectedMenu,
-                selectedView:state.selectedView
+                selectedView:state.selectedView,
+                addAssetDialog:state.addAssetDialog,
+                pesanDialog:state.pesanDialog
+
             };
         case 'CHOOSE_VIEW':
             return {
                 selectedMenu:state.selectedMenu,
-                selectedView:action.selectedView
+                selectedView:action.selectedView,
+                addAssetDialog:state.addAssetDialog,
+                pesanDialog:state.pesanDialog
+            };
+        case 'SHOW_PESAN_DIALOG':
+            return {
+                selectedMenu:state.selectedMenu,
+                selectedView:state.selectedView,
+                addAssetDialog:state.addAssetDialog,
+                pesanDialog:action.pesanDialog
+            };
+        case 'SHOW_ADDASSET_DIALOG':
+            return {
+                selectedMenu:state.selectedMenu,
+                selectedView:state.selectedView,
+                addAssetDialog:action.addAssetDialog,
+                pesanDialog:state.pesanDialog
             };
         default :
             return state;
@@ -22,11 +46,15 @@ function dataReducer(state = [
         {name:'welcome',
             type:'text',
             content:'Hi, Welcome',
-            id:0},
+            id:0,
+            fontSize:20
+        },
         {name:'logo',
             type:'image',
             content:'img/logo_full.png',
-            id:0}
+            id:1,
+            x:500,
+            y:108}
     ]},
     {assets:[]},
     {assets:[]},
@@ -57,7 +85,7 @@ function dataReducer(state = [
 function detailReducer(state =  {
     project_name:'Figuran Hans Solo',
     tanggal:'2015-04-04',
-    harga:'Rp. 11.000,00'
+    harga:21600
 }, action){
     switch(action.type){
         case 'UPDATE_NAME':
@@ -87,9 +115,9 @@ function propertiesReducer(state = {
     background:'white',
     bahan:'Karton',
     bentuk:'Kubus',
-    tinggi:'20',
+    tinggi:'10',
     panjang:'20',
-    lebar:'20'
+    lebar:'30'
 }, action){
     switch(action.type){
         case 'UPDATE_BACKGROUND':

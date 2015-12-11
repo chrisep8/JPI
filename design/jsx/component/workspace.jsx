@@ -15,9 +15,9 @@ class Workspace extends React.Component{
             case 3:
                 return this.props.panjang;
             case 4:
-                return this.props.tinggi;
+                return this.props.lebar;
             case 5:
-                return this.props.tinggi;
+                return this.props.lebar;
         }
     }
     calculateHeight(){
