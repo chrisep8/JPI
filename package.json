@@ -18,6 +18,8 @@
     "babel-preset-react": "^6.5.0"
   },
   "devDependencies": {
+    "babelify": "^7.3.0",
+    "node-sass": "^3.8.0",
     "webpack": "^1.13.0"
   },
   "scripts": {

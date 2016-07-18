@@ -1,0 +1,385 @@
+/* FRAMEWORKS || Frameworks imports
+========================================================================== */
+/* line 5, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* BASE || Global variables and styles
+========================================================================== */
+/* line 1, ../sass/base/_global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 3, ../sass/base/_global.scss */
+body {
+  font-family: Raleway, serif !important;
+  background-color: #BDBDBD;
+}
+
+/* line 8, ../sass/base/_global.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 14, ../sass/base/_global.scss */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* PRIMARY COLOR
+========================================================================== */
+/* SECONDARY COLOR
+========================================================================== */
+/* SIZES
+========================================================================== */
+/* COMMON UTIL
+========================================================================== */
+/* line 18, ../sass/base/_variable.scss */
+.depth_one {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 22, ../sass/base/_variable.scss */
+.depth_two {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* line 26, ../sass/base/_variable.scss */
+.depth_three {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* line 30, ../sass/base/_variable.scss */
+.depth_four {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* line 34, ../sass/base/_variable.scss */
+.depth_five {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* line 38, ../sass/base/_variable.scss */
+.dividerBottom {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: #283c4c;
+  opacity: 0.6;
+}
+/* line 12, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.dividerBottom:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 45, ../sass/base/_variable.scss */
+.user-select, .toolbar .menu .option, .toolbar .views .option, .expanded .asset .addAsset {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
+/* LAYOUT || Structure and layout styles (Macro styles).
+========================================================================== */
+/* COMPONENT || Re-use able component styles (Micro styles).
+========================================================================== */
+/* line 1, ../sass/component/_navbar.scss */
+.navBar {
+  width: 100%;
+  position: fixed;
+  z-index: 200;
+}
+/* line 5, ../sass/component/_navbar.scss */
+.navBar .top {
+  height: 50px;
+  background: linear-gradient(90deg, #00b0ff, #0090e9);
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+/* line 12, ../sass/component/_navbar.scss */
+.navBar .top #logo {
+  max-height: 30px;
+  margin: auto;
+}
+/* line 18, ../sass/component/_navbar.scss */
+.navBar .divider {
+  height: 1px;
+  width: 100%;
+  background-color: #00b0ff;
+  opacity: 1;
+}
+/* line 23, ../sass/component/_navbar.scss */
+.navBar .divider .innerDivider {
+  background-color: white;
+  height: 1px;
+  opacity: 0.5;
+}
+/* line 30, ../sass/component/_navbar.scss */
+.navBar .bottom {
+  height: 50px;
+  background-color: #0090E9;
+  margin: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+/* line 36, ../sass/component/_navbar.scss */
+.navBar .bottom .title {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.7em;
+  padding-left: 1em;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3em;
+  font-style: italic;
+}
+/* line 12, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.navBar .bottom .title:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 1, ../sass/component/_toolbar.scss */
+.toolbar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #2E4557;
+}
+/* line 7, ../sass/component/_toolbar.scss */
+.toolbar .menu {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #283c4c;
+}
+/* line 12, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.toolbar .menu:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 11, ../sass/component/_toolbar.scss */
+.toolbar .menu .option {
+  width: 33.33333%;
+  float: left;
+  margin-right: 1.69492%;
+  height: 50px;
+  margin: 0;
+  padding-top: 1.1em;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  opacity: 0.5;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1em;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+/* line 30, ../sass/component/_toolbar.scss */
+.toolbar .views {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.toolbar .views:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 33, ../sass/component/_toolbar.scss */
+.toolbar .views .option {
+  width: 16.66667%;
+  float: left;
+  margin-right: 1.69492%;
+  height: 30px;
+  margin: 0;
+  padding-top: 8px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  opacity: 0.5;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 0.9em;
+  transition: opacity 0.1s;
+  cursor: pointer;
+  position: relative;
+}
+/* line 51, ../sass/component/_toolbar.scss */
+.toolbar .tools {
+  background-color: #354f64;
+}
+
+/* line 1, ../sass/component/_workspace.scss */
+.workspace {
+  align-content: center;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  overflow: auto;
+  justify-content: center;
+  display: flex;
+}
+/* line 8, ../sass/component/_workspace.scss */
+.workspace .canvas {
+  margin: auto;
+}
+
+/* line 1, ../sass/component/_expanded.scss */
+.expanded {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 0.85em;
+  opacity: 0.8;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 2%;
+}
+/* line 12, ../../../../../Ruby23/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.expanded:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 12, ../sass/component/_expanded.scss */
+.expanded .asset .addAsset {
+  width: 16.66667%;
+  float: left;
+  margin-right: 4.16667%;
+  background-color: #283c4c;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em;
+  cursor: pointer;
+  position: relative;
+  min-width: 100px;
+}
+/* line 26, ../sass/component/_expanded.scss */
+.expanded .properties {
+  margin-left: 15%;
+}
+/* line 28, ../sass/component/_expanded.scss */
+.expanded .properties .panel_one {
+  width: 16.66667%;
+  float: left;
+  margin-right: 1.69492%;
+  padding: 1em;
+  margin: 0;
+  color: white;
+}
+/* line 34, ../sass/component/_expanded.scss */
+.expanded .properties .panel {
+  width: 66.66667%;
+  float: left;
+  margin-right: 1.69492%;
+  padding: 1em;
+  margin: 0;
+  color: white;
+  overflow: hidden;
+}
+/* line 43, ../sass/component/_expanded.scss */
+.expanded .details {
+  margin-left: 15%;
+}
+/* line 45, ../sass/component/_expanded.scss */
+.expanded .details .preview {
+  width: 28.57143%;
+  float: left;
+  margin-right: 7.14286%;
+  height: 150px;
+  background-color: #283c4c;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em;
+  cursor: pointer;
+  position: relative;
+}
+/* line 57, ../sass/component/_expanded.scss */
+.expanded .details .info {
+  width: 64.28571%;
+  float: left;
+  margin-right: 7.14286%;
+  margin: 1em;
+}
