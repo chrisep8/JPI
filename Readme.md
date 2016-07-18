@@ -1,13 +1,13 @@
 How to use
 ==========
 
-This is a very old code, one of the first website i build, very imperfect. The is one version below the final version that is shown on the website, it's missing only the asset and images, the react and sass file should be copmlete.
+This is a very old code, one of the first website i build, very imperfect. This one version below the final version that is shown on the website, it's missing only the asset and images, the react and sass file should be copmplete.
 
 1. `npm install`, to install all dependencies listed in package.json
 
 2. `npm install -g browserify watchify`, to install tools needed to build the application
 
-3. Install [ruby](http://rubyinstaller.org/) than [sass](http://sass-lang.com/install), [compass](http://compass-style.org/install/) and [susy](http://susydocs.oddbird.net/en/latest/install/) 
+3. Install [ruby](http://rubyinstaller.org/) than sass `gem install sass`, compass `gem install compass` and compass-susy `compass install susy` 
 
 4. `compass compile`, to compile the stylesheet
 
