@@ -85,7 +85,7 @@ class Properties extends React.Component{
                         <RadioButton
                             value="Kardus"
                             label="Kardus"
-                            labelStyle={{color:'white','fontSize':'0.9em'}}/>
+                            labelStyle={{color:'whi te','fontSize':'0.9em'}}/>
                         <RadioButton
                             value="Plastik"
                             label="Plastik"
