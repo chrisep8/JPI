@@ -1,7 +1,7 @@
 How to use
 ==========
 
-This is a very old code, one of the first website i build, very imperfect. This one version below the final version that is shown on the website, it's missing only the asset and images, the react and sass file should be copmplete.
+This is a very old code, one of the first website i build, very imperfect. This is one version below the final version that is shown on the website, it's missing only the asset and images, the react and sass file should be copmplete.
 
 1. `npm install`, to install all dependencies listed in package.json
 
