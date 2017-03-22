@@ -1,7 +1,12 @@
+About
+=====
+
+Tthis was supposed to work as a simplified photoshop. Instead of making a cutout of a box in photoshop, this application will allow the user focus on designing each side of the box, the data (Images, image coordinate on each sides, box color, etc) will be sent to the server where the image of the final cutout will be generated.
+
+Generating the data as json wont be hard since we are saving everything onto a redux store.
+
 How to use
 ==========
-
-This is a very old code, one of the first website i build, very imperfect. This is one version below the final version that is shown on the website, it's missing only the asset and images, the react and sass file should be copmplete.
 
 1. `npm install`, to install all dependencies listed in package.json
 
@@ -18,3 +23,11 @@ This is a very old code, one of the first website i build, very imperfect. This 
                 -t          = extension for browserify to make it do something else
                 babelify    = the extension used, it's job is to convert different js languages into the currently common js standard, ES5
                 --presets   = the language setting used, here it is react(which uses jsx) and es2015(another name used for the ES6 standard)
+
+
+
+This is a very old code, one of the first website i build, very imperfect (Ex. bad naming & file orginizing schemes), not to mention i lost the actual final functioning version before i finally started migrating my code to github.
+
+This code is one version below the version  that is shown on the website (which is also one version below the actual functioning final version).
+
+It's missing the asset and images and a few important features (ex. adding, deleting asset, custom color), the sass file should be complete though.
